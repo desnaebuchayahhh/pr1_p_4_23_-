@@ -1,39 +1,40 @@
 void main() {
-
-  print("*"*30);
-
+  print("*" * 30);
 
   String FIO = "Машуков Владимир Дмитриевич";
   int age = 20;
   String pol = "Мужской";
-  String Numbergruppi = "П-4-23";
+  String NumberGruppi = "П-4-23";
 
-  print("ФИО: $FIO");
+  
+  if (FIO.contains(" "))
+  {
+    print("ФИО: $FIO");
+  } 
+  else 
+  {
+    print("ФИО: (Ошибка! Не содержит пробелов)");
+  }
   print("Возраст: $age");
   print("Пол: $pol");
-  print("Номер группы: $Numbergruppi");
+  print("Номер группы: $NumberGruppi");
 
+  print("*" * 30);
 
-    print("*"*30);
+  String mestoObucheniyaShort = "МПТ";
+  String mestoObucheniyaFull = "Московский приборостроительный техникум имени Плеханова";
 
- 
-  String mestoobucheniyashort = "МПТ";
-  String mestoobucheniyafull = "Московский приборостроительный техникум имени Плеханова";
+  print("Место обучения: $mestoObucheniyaShort ($mestoObucheniyaFull");
 
-  print("Место обучения: $mestoobucheniyashort ($mestoobucheniyafull");
+  print("*" * 30);
 
+  List<String> languages = ["С++", "Python", "Java"];
 
-  print("*"*30);
+  print("Известные языки программирования: ${languages.join(', ')}");
 
-  
-  List<String> Languages = ["С++", "Python", "Java"];
+  print("*" * 30);
 
-  print("Известные языки программирования: $Languages");
-
-  
-  print("*"*30);
- 
-  String dartkonspect = """
+  String dartKonspect = """
   Основные типы данных в Dart:
 
   - int: Целые числа.
@@ -50,36 +51,37 @@ void main() {
   Пробелы в тексте расставлены корректно.
   """;
 
-  print("Конспект по типам данных Dart:\n$dartkonspect");
+dartKonspect.trim();
 
-  
-  bool hasRune = dartkonspect.contains("Rune");
+  bool hasRune = dartKonspect.contains("Rune");
   print("В тексте упоминание 'Rune': $hasRune");
 
- 
-  print("*"*30);
+  print("*" * 30);
 
- 
-  List<String> allLanguages = List.from(Languages);
+  List<String> allLanguages = List.from(languages);
   allLanguages.addAll(["HTML", "JavaScript", "Phyton"]);
 
-
   List<String> uniLanguages = allLanguages.toSet().toList();
-  print("Все языки программирования (известные + желаемые): $uniLanguages");
+  print("Все языки программирования (известные + желаемые): ${uniLanguages.join(' ')}");
 
-
-  
-  print("*"*30);
+  print("*" * 30);
 
   List<String> peremennie = [
-    "FIO", "age", "POL", "Numbergruppi",
-    "mestoobucheniyashort", "mestoobucheniyafull",
-    "Languages", "dartKonspect", "hasRune",
-    "allLanguages", "uniLanguages"
+    "FIO",
+    "age",
+    "POL",
+    "NumberGruppi",
+    "mestoObucheniyaShort",
+    "mestoObucheniyaFull",
+    "Languages",
+    "dartKonspect",
+    "hasRune",
+    "allLanguages",
+    "uniLanguages"
   ];
 
-  print("Использованные переменные: $peremennie");
+  print("Использованные переменные: ${peremennie.join(', ')}");
 
-  
-  print("*"*30);
+  print("*" * 30);
 }
+
